@@ -19,7 +19,7 @@ public class Actividad {
     private Boolean es_activo;
     private Integer tipo_id;
     private Integer maximoPersonas;
-    private Categoria categoria;
+    private Tipo tipo;
 
 
     public Actividad(String tit, String cuer, String req, String fecha,String tiemp, Float x, Float y, Integer tipo, Integer ide, Integer max){
@@ -64,18 +64,15 @@ public class Actividad {
         return es_activo;
     }
 
-    public Integer getTipo() {
-        return tipo_id;
+    public Tipo getTipo() {
+        return tipo;
     }
 
     public Integer getMaximoPersonas() { return maximoPersonas; }
 
-    public Categoria getCategoria() {
-        return categoria;
+    public void setTipo(Tipo tipo) {
+        this.tipo = tipo;
     }
 
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
-    }
 
 }

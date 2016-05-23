@@ -61,7 +61,7 @@ public class Explorar extends ListFragment {
 
                 for (int i=0;i<actividadesLista.length;i++){
                     titulosString[i]=" "+actividadesLista[i].getTitulo()+" ";
-                 //   fechasString[i]=" "+actividadesLista[i].getFechaInicio()+" "+ ((actividadesLista[i].getCategoria()).getNombreCategoria()).toUpperCase();
+                    //fechasString[i]=" "+actividadesLista[i].getFechaInicio()+" "+ (((actividadesLista[i].getTipo()).getCategoria()).getNombreCategoria()).toUpperCase();
                     fechasString[i]=" "+actividadesLista[i].getFechaInicio()+" ";
                 }
 

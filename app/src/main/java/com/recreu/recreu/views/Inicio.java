@@ -41,7 +41,6 @@ public class Inicio extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.inicio, container, false);
     }
 
@@ -51,7 +50,7 @@ public class Inicio extends Fragment {
         tv = (TextView) getActivity().findViewById(R.id.nombreUsuario);
         tv.setText(usuario.getPrimerNombre());
         bienv = (TextView) getActivity().findViewById(R.id.bienvenida);
-        if (!usuario.isSexo()) bienv.setText("Bienvenida");
+        if (!usuario.isSexo()) bienv.setText("    BIENVENIDA");
         eliminar = (Button) getActivity().findViewById(R.id.botonEliminarUsuario);
         if (!usuario.isEsAdministrador()) eliminar.setVisibility(View.INVISIBLE);
 

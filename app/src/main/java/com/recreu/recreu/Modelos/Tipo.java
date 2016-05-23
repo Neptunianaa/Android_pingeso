@@ -5,16 +5,11 @@ package com.recreu.recreu.Modelos;
  */
 public class Tipo {
     private int tipoId;
-    private int categoriaId;
     private String nombreTipo;
+    private Categoria categoria;
 
-    public Tipo(String nombre,int tipoId,int categoriaId){
-        this.categoriaId=categoriaId;
+    public Tipo(String nombre,int tipoId){
         this.tipoId=tipoId;
-    }
-
-    public int getCategoriaId() {
-        return categoriaId;
     }
 
     public int getTipoId() {
@@ -25,5 +20,13 @@ public class Tipo {
         return nombreTipo;
     }
 
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
 
 }
