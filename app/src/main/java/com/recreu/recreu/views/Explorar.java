@@ -61,7 +61,7 @@ public class Explorar extends ListFragment {
 
                 for (int i=0;i<actividadesLista.length;i++){
                     titulosString[i]=" "+actividadesLista[i].getTitulo()+" ";
-                  //  fechasString[i]=" "+actividadesLista[i].getFechaInicio()+" "+ (actividadesLista[i].getCategoria().getNombreCategoria()).toUpperCase();   // AQUI PONER CATEGORIA :C
+                 //   fechasString[i]=" "+actividadesLista[i].getFechaInicio()+" "+ ((actividadesLista[i].getCategoria()).getNombreCategoria()).toUpperCase();
                     fechasString[i]=" "+actividadesLista[i].getFechaInicio()+" ";
                 }
 
@@ -89,8 +89,7 @@ public class Explorar extends ListFragment {
     }
 
     @Override
-    public void onListItemClick(ListView l, View v, int position, long id) { // ACA VEO LO QUE SETEO A DETALLEACTIVIDAD
-
+    public void onListItemClick(ListView l, View v, int position, long id) {
         actividad=actividadesLista[position];
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.replace(R.id.fragment_container, new detalleActividad(actividad,usuario),"detalleActi");

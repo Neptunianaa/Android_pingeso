@@ -2,6 +2,7 @@ package com.recreu.recreu.utilities;
 
 import android.util.Log;
 import com.recreu.recreu.Modelos.Actividad;
+import com.recreu.recreu.Modelos.Categoria;
 import com.recreu.recreu.Modelos.Usuario;
 
 import org.json.JSONArray;
@@ -32,14 +33,20 @@ public class JsonHandler {
                 dato= jsoncategoria.getString("tipoId");
                 int id_tipo=Integer.parseInt(dato);
 
+
+                String nombre=jsoncategoria.getString("nombreCategoria");
+
                 dato= jsonActividad.getString("actividadId");
                 int ide_actividad=Integer.parseInt(dato);
 
-                //dato= jsonActividad.getString("personasMaximas");
-                // int cupos=Integer.parseInt(dato);
+                Categoria categoria=new Categoria(nombre,id_tipo);
 
-                actividad = new Actividad(jsonActividad.getString("tituloActividad"),jsonActividad.getString("cuerpoActividad"),jsonActividad.getString("requerimientosActividad"),jsonActividad.getString("fechaInicio"),jsonActividad.getString("duracionEstimada"),x,y,id_tipo,ide_actividad,666);
+               // dato= jsonActividad.getString("personasMaximas");
+               // int cupos=Integer.parseInt(dato);
+
+                actividad = new Actividad(jsonActividad.getString("tituloActividad"),jsonActividad.getString("cuerpoActividad"),jsonActividad.getString("requerimientosActividad"),jsonActividad.getString("fechaInicio"),jsonActividad.getString("duracionEstimada"),x,y,id_tipo,ide_actividad,13);
                 //actividad = new Actividad(row.getString("tituloActividad"),row.getString("cuerpoActividad"),row.getString("requerimientosActividad"),null,null,x,y,null,ide_actividad,cupos);
+                actividad.setCategoria(categoria);
                 arrayActividades[i] = actividad;
 
             }
